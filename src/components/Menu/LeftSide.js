@@ -1,6 +1,6 @@
 import React from 'react';
 import './LeftSide.css'
-import { Col, Row, Button,  Form, FormGroup, Label, Input, Alert} from 'reactstrap';
+import { Col, Row, Button,  Form, FormGroup, Label, Input, Alert, Container} from 'reactstrap';
 
 function LeftSide() {
     function check(){
@@ -37,9 +37,13 @@ function LeftSide() {
         
     }
     return(
+        
         <div className="LeftSide">
+
             <Form className="formzim">
-            <div className="container">
+                
+            <div className="bordinha">
+            <Container>
                 <FormGroup>
                         <Label for="exampleEmail" className="titulo">Informações do usúario</Label>
                 </FormGroup>
@@ -141,6 +145,7 @@ function LeftSide() {
                 <FormGroup>
                     <Button color="success" onClick={check}>Seguir para método de pagamento</Button>
                 </FormGroup>
+                </Container>
                 </div>
             </Form>
         </div>
