@@ -8,36 +8,30 @@
 .productImg {
     height: 64px;
     width: 64px;
-    object-fit: contain;
 }
 
-.productName {
-    position: relative;
-}
 
 .header {
-    display: flex;
-    border: 1px solid red;
-    justify-content: left;
-    align-items: start;
-    height: 10%;
-    width: 80%;
-    margin: 50px;
-    min-width: 80%;
+    position: relative;
+    margin-left:5%;
+    margin-right:auto;
+    margin-top: 5%;
 }
-
-.header > h4 {
-    font-weight: bolder;
-    width: 130vh
+.produto{
+    border-spacing: 2px;
+    
 }
-
+.teste{
+    position: relative;
+    margin-top: 2%;
+}
 .description {
     font-size: 16px;
     font-weight: lighter;
 }
 
 .price {
-    padding-left: 100px;
-    margin: auto;
-    font-size: 20px;
+    position: relative;
+    margin-top: 8%;
+    font-size: 140%;
 }
