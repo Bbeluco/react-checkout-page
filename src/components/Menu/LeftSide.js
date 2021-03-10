@@ -4,16 +4,35 @@ import { Col, Row, Button,  Form, FormGroup, Label, Input, Alert} from 'reactstr
 
 function LeftSide() {
     function check(){
+        
         const email = document.querySelector('#exampleEmail');
         const nome = document.querySelector('#exampleNome');
         const sobrenome = document.querySelector('#exampleSobrenome');
-        const endereço = document.querySelector('#exampleAddress');
+        const endereco = document.querySelector('#exampleAddress');
         const cidade = document.querySelector('#exampleCity');
         const estado = document.querySelector('#exampleState');
-        const CEP = document.querySelector('#exampleZip');
-
+        const cep = document.querySelector('#exampleZip');
+        
         const emailVazio = document.querySelector('#emailError');
-        console.log(emailVazio)
+        const nomeVazio = document.querySelector('#nomeError');
+        const sobrenomeVazio = document.querySelector('#sobrenomeError');
+        const enderecoVazio = document.querySelector('#enderecoError');
+        const cidadeVazio = document.querySelector('#cidadeError');
+        const cepVazio = document.querySelector('#cepError');
+
+        emailVazio.hidden = true;
+        nomeVazio.hidden = true;
+        sobrenomeVazio.hidden = true;
+        enderecoVazio.hidden = true;
+        cidadeVazio.hidden = true;
+        cepVazio.hidden = true;
+
+        if(!email.value) emailVazio.hidden = false;
+        if(!nome.value) nomeVazio.hidden = false;
+        if(!sobrenome.value) sobrenomeVazio.hidden = false;
+        if(!endereco.value) enderecoVazio.hidden = false;
+        if(!cidade.value) cidadeVazio.hidden = false;
+        if(!cep.value) cepVazio.hidden = false;
 
         
     }
@@ -29,7 +48,7 @@ function LeftSide() {
                     <FormGroup>
                         <Label for="exampleEmail">Email</Label>
                         <Input type="email" name="email" id="exampleEmail" placeholder="Ex: xzy@abc.com" />
-                        <Alert color="danger" id="emailError">
+                        <Alert color="danger" id="emailError" hidden>
                             Este campo não pode ser vazio
                         </Alert>
                     </FormGroup>
@@ -40,7 +59,7 @@ function LeftSide() {
                         <FormGroup>
                             <Label for="exampleNome">Nome</Label>
                             <Input type="text" name="nome" id="exampleNome" placeholder="Ex: Carlos" />
-                            <Alert color="danger">
+                            <Alert color="danger" id="nomeError" hidden>
                                 Este campo não pode ser vazio
                             </Alert>
                         </FormGroup>
@@ -51,7 +70,7 @@ function LeftSide() {
                         <FormGroup>
                             <Label for="exampleSobrenome">Sobrenome</Label>
                             <Input type="text" name="sobrenome" id="exampleSobrenome" placeholder="Ex: Silva"/>
-                            <Alert color="danger">
+                            <Alert color="danger" id="sobrenomeError" hidden>
                                 Este campo não pode ser vazio
                             </Alert>
                         </FormGroup>
@@ -60,7 +79,7 @@ function LeftSide() {
                 <FormGroup>
                     <Label for="exampleAddress">Endereço</Label>
                     <Input type="text" name="address" id="exampleAddress" placeholder="Ex: Rua aaaaaa, 123456 - Bairro bbbbbbbbb"/>
-                    <Alert color="danger">
+                    <Alert color="danger" id="enderecoError" hidden>
                         Este campo não pode ser vazio
                     </Alert>
                 </FormGroup>
@@ -69,7 +88,7 @@ function LeftSide() {
                     <FormGroup>
                         <Label for="exampleCity">Cidade</Label>
                         <Input type="text" name="city" id="exampleCity" placeholder="Ex: São Paulo"/>
-                        <Alert color="danger">
+                        <Alert color="danger" id="cidadeError" hidden>
                             Este campo não pode ser vazio
                         </Alert>
                     </FormGroup>
@@ -113,7 +132,7 @@ function LeftSide() {
                     <FormGroup>
                         <Label for="exampleZip">CEP</Label>
                         <Input type="text" name="zip" id="exampleZip" placeholder="Ex: 00000-000"/>
-                        <Alert color="danger">
+                        <Alert color="danger" id="cepError" hidden>
                             Este campo não pode ser vazio
                         </Alert>
                     </FormGroup>  
