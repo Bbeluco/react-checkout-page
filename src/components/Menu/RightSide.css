@@ -28,16 +28,15 @@
 
 .header > h4 {
     font-weight: bolder;
-    width: 130vh
 }
 
 .description {
     font-size: 16px;
     font-weight: lighter;
+    display: flex;
 }
 
 .price {
-    padding-left: 100px;
     margin: auto;
     font-size: 20px;
 }
