@@ -1,0 +1,20 @@
+.rightSide {
+    display: flex;
+    height: 100vh;
+    width: 40%;
+    background-color: wheat;
+}
+
+.productImg {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    object-fit: contain;
+    left: 60%;
+    margin-top: 50px;
+}
+
+.productName {
+    position: relative;
+
+}

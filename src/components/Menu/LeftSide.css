@@ -1,0 +1,5 @@
+.LeftSide {
+    display: flex;
+    height: 100vh;
+    width: 60%;
+}

@@ -1,11 +1,15 @@
 import React from 'react';
-import Navbar from './components/Menu/Navbar'
+import RightSide from './components/Menu/RightSide'
+import LeftSide from './components/Menu/LeftSide';
+import './App.css'
 
 function App() {
   return (
-    <div >
-      <Navbar />
-
+    <div class="app">
+      <div class="checkout">
+        <LeftSide />
+        <RightSide />
+      </div>
     </div>
   );
 }
