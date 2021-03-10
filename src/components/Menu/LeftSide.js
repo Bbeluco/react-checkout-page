@@ -1,8 +1,22 @@
 import React from 'react';
 import './LeftSide.css'
-import { Col, Row, Button,  Form, FormGroup, Label, Input} from 'reactstrap';
+import { Col, Row, Button,  Form, FormGroup, Label, Input, Alert} from 'reactstrap';
 
 function LeftSide() {
+    function check(){
+        const email = document.querySelector('#exampleEmail');
+        const nome = document.querySelector('#exampleNome');
+        const sobrenome = document.querySelector('#exampleSobrenome');
+        const endereço = document.querySelector('#exampleAddress');
+        const cidade = document.querySelector('#exampleCity');
+        const estado = document.querySelector('#exampleState');
+        const CEP = document.querySelector('#exampleZip');
+
+        const emailVazio = document.querySelector('#emailError');
+        console.log(emailVazio)
+
+        
+    }
     return(
         <div className="LeftSide">
             <Form className="formzim">
@@ -15,40 +29,55 @@ function LeftSide() {
                     <FormGroup>
                         <Label for="exampleEmail">Email</Label>
                         <Input type="email" name="email" id="exampleEmail" placeholder="Ex: xzy@abc.com" />
+                        <Alert color="danger" id="emailError">
+                            Este campo não pode ser vazio
+                        </Alert>
                     </FormGroup>
                 </Col>
                 </Row>
                 <Row form>
                     <Col md={5}>
                         <FormGroup>
-                            <Label for="examplePassword">Nome</Label>
-                            <Input type="password" name="password" id="examplePassword" placeholder="Ex: Carlos" />
+                            <Label for="exampleNome">Nome</Label>
+                            <Input type="text" name="nome" id="exampleNome" placeholder="Ex: Carlos" />
+                            <Alert color="danger">
+                                Este campo não pode ser vazio
+                            </Alert>
                         </FormGroup>
                     </Col>
                     <Col md={1}>
                     </Col>
                     <Col md={6}>
                         <FormGroup>
-                            <Label for="exampleAddress">Sobrenome</Label>
-                            <Input type="text" name="address" id="exampleAddress" placeholder="Ex: Silva"/>
+                            <Label for="exampleSobrenome">Sobrenome</Label>
+                            <Input type="text" name="sobrenome" id="exampleSobrenome" placeholder="Ex: Silva"/>
+                            <Alert color="danger">
+                                Este campo não pode ser vazio
+                            </Alert>
                         </FormGroup>
                     </Col>
                 </Row>
                 <FormGroup>
-                    <Label for="exampleAddress2">Endereço</Label>
-                    <Input type="text" name="address2" id="exampleAddress2" placeholder="Ex: Rua aaaaaa, 123456 - Bairro bbbbbbbbb"/>
+                    <Label for="exampleAddress">Endereço</Label>
+                    <Input type="text" name="address" id="exampleAddress" placeholder="Ex: Rua aaaaaa, 123456 - Bairro bbbbbbbbb"/>
+                    <Alert color="danger">
+                        Este campo não pode ser vazio
+                    </Alert>
                 </FormGroup>
                 <Row form>
                     <Col md={6}>
                     <FormGroup>
                         <Label for="exampleCity">Cidade</Label>
                         <Input type="text" name="city" id="exampleCity" placeholder="Ex: São Paulo"/>
+                        <Alert color="danger">
+                            Este campo não pode ser vazio
+                        </Alert>
                     </FormGroup>
                     </Col>
                     <Col md={2}>
                     <FormGroup>
                         <Label for="exampleState">UF</Label>
-                        <Input type="select" name="select" id="exampleSelect">
+                        <Input type="select" name="select" id="exampleState">
                             <option> </option>
                             <option>AC</option>
                             <option>AL</option>
@@ -84,11 +113,14 @@ function LeftSide() {
                     <FormGroup>
                         <Label for="exampleZip">CEP</Label>
                         <Input type="text" name="zip" id="exampleZip" placeholder="Ex: 00000-000"/>
+                        <Alert color="danger">
+                            Este campo não pode ser vazio
+                        </Alert>
                     </FormGroup>  
                     </Col>
                 </Row>
                 <FormGroup>
-                    <Button color="success">Seguir para método de pagamento</Button>
+                    <Button color="success" onClick={check}>Seguir para método de pagamento</Button>
                 </FormGroup>
                 </div>
             </Form>
