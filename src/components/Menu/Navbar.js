@@ -1,29 +1,26 @@
-import React from 'react';
-import Logo from '../../assets/img/logo.png';
-import './Navbar.css';
+import React, { useState } from 'react';
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
-  } from 'reactstrap';
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
 
-  const Example = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggle = () => setIsOpen(!isOpen);
+const Example = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-function navbar(){
-    return (
-        <div>
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">reactstrap</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -57,7 +54,7 @@ function navbar(){
         </Collapse>
       </Navbar>
     </div>
-    );
+  );
 }
 
-export default navbar;
+export default Example;
