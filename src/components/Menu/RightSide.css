@@ -6,7 +6,6 @@
 }
 
 .productImg {
-
     height: 64px;
     width: 64px;
     object-fit: contain;
@@ -20,8 +19,19 @@
     display: flex;
     border: 1px solid red;
     justify-content: left;
-    align-items: center;
-    height: 100px;
-    width: 10000px;
-    margin: 50px
+    align-items: start;
+    height: 10%;
+    width: 80%;
+    margin: 50px;
+    max-width: 80%;
+}
+
+.header > h4 {
+    font-weight: bolder;
+    width: 130vh
+}
+
+.description {
+    font-size: 16px;
+    font-weight: lighter;
 }
