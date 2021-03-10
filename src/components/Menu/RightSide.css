@@ -1,20 +1,43 @@
 .rightSide {
-    display: flex;
     height: 100vh;
     width: 40%;
-    background-color: wheat;
+    background-color: rgb(230, 230, 230);
+    display: flex;
 }
 
 .productImg {
-    position: relative;
     height: 64px;
     width: 64px;
     object-fit: contain;
-    left: 60%;
-    margin-top: 50px;
 }
 
 .productName {
     position: relative;
+}
 
+.header {
+    display: flex;
+    border: 1px solid red;
+    justify-content: left;
+    align-items: start;
+    height: 10%;
+    width: 80%;
+    margin: 50px;
+    min-width: 80%;
+}
+
+.header > h4 {
+    font-weight: bolder;
+    width: 130vh
+}
+
+.description {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.price {
+    padding-left: 100px;
+    margin: auto;
+    font-size: 20px;
 }
