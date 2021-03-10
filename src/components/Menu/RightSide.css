@@ -12,13 +12,10 @@
 
 
 .header {
-    display: flex;
-    justify-content: left;
-    align-items: start;
-    height: 10%;
-    width: 80%;
-    margin: 50px;
-    min-width: 80%;
+    position: relative;
+    margin-left:5%;
+    margin-right:auto;
+    margin-top: 5%;
 }
 .produto{
     border-spacing: 2px;
@@ -34,20 +31,7 @@
 }
 
 .price {
-    margin: auto;
-    font-size: 20px;
-}
-
-.row {
     position: relative;
-    border: 1px solid black;
-    margin: 30px;
-    top: 100px;
-    left: -5%;
-    width: 1000%;
-}
-
-hr {
-    border: 1px solid black;
-    display: inline;
+    margin-top: 8%;
+    font-size: 140%;
 }
