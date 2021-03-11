@@ -11,6 +11,7 @@ function LeftSide() {
     const cidade = document.querySelector('#exampleCity');
     const cep = document.querySelector('#exampleZip');
 
+
     //Variables error message
     const emailVazioError = document.querySelector('#emailError');
     const nomeVazioError = document.querySelector('#nomeError');
