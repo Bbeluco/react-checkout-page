@@ -3,38 +3,41 @@ import './LeftSide.css'
 import { Col, Row, Button,  Form, FormGroup, Label, Input, Alert, Container} from 'reactstrap';
 
 function LeftSide() {
-    function check(){
-        
-        const email = document.querySelector('#exampleEmail');
-        const nome = document.querySelector('#exampleNome');
-        const sobrenome = document.querySelector('#exampleSobrenome');
-        const endereco = document.querySelector('#exampleAddress');
-        const cidade = document.querySelector('#exampleCity');
-        const estado = document.querySelector('#exampleState');
-        const cep = document.querySelector('#exampleZip');
-        
-        const emailVazio = document.querySelector('#emailError');
-        const nomeVazio = document.querySelector('#nomeError');
-        const sobrenomeVazio = document.querySelector('#sobrenomeError');
-        const enderecoVazio = document.querySelector('#enderecoError');
-        const cidadeVazio = document.querySelector('#cidadeError');
-        const cepVazio = document.querySelector('#cepError');
+    //Variables input
+    const email = document.querySelector('#exampleEmail');
+    const nome = document.querySelector('#exampleNome');
+    const sobrenome = document.querySelector('#exampleSobrenome');
+    const endereco = document.querySelector('#exampleAddress');
+    const cidade = document.querySelector('#exampleCity');
+    const cep = document.querySelector('#exampleZip');
 
-        emailVazio.hidden = true;
-        nomeVazio.hidden = true;
-        sobrenomeVazio.hidden = true;
-        enderecoVazio.hidden = true;
-        cidadeVazio.hidden = true;
-        cepVazio.hidden = true;
+    //Variables error message
+    const emailVazioError = document.querySelector('#emailError');
+    const nomeVazioError = document.querySelector('#nomeError');
+    const sobrenomeVazioError = document.querySelector('#sobrenomeError');
+    const enderecoVazioError = document.querySelector('#enderecoError');
+    const cidadeVazioError = document.querySelector('#cidadeError');
+    const cepVazioError = document.querySelector('#cepError');
 
-        if(!email.value) emailVazio.hidden = false;
-        if(!nome.value) nomeVazio.hidden = false;
-        if(!sobrenome.value) sobrenomeVazio.hidden = false;
-        if(!endereco.value) enderecoVazio.hidden = false;
-        if(!cidade.value) cidadeVazio.hidden = false;
-        if(!cep.value) cepVazio.hidden = false;
+    function checkAll(){
+        emailVazioError.hidden = true;
+        nomeVazioError.hidden = true;
+        sobrenomeVazioError.hidden = true;
+        enderecoVazioError.hidden = true;
+        cidadeVazioError.hidden = true;
+        cepVazioError.hidden = true;
 
-        
+        checkEmpty()
+    }
+    
+    function checkEmpty(){
+        console.log(emailVazioError)
+        if(!email.value) emailVazioError.hidden = false;
+        if(!nome.value) nomeVazioError.hidden = false;
+        if(!sobrenome.value) sobrenomeVazioError.hidden = false;
+        if(!endereco.value) enderecoVazioError.hidden = false;
+        if(!cidade.value) cidadeVazioError.hidden = false;
+        if(!cep.value) cepVazioError.hidden = false; 
     }
     return(
         
@@ -143,7 +146,7 @@ function LeftSide() {
                     </Col>
                 </Row>
                 <FormGroup>
-                    <Button color="success" onClick={check}>Seguir para método de pagamento</Button>
+                    <Button color="success" onClick={checkAll}>Seguir para método de pagamento</Button>
                 </FormGroup>
                 </Container>
                 </div>
