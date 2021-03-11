@@ -10,7 +10,6 @@ function LeftSide() {
         const sobrenome = document.querySelector('#exampleSobrenome');
         const endereco = document.querySelector('#exampleAddress');
         const cidade = document.querySelector('#exampleCity');
-        const estado = document.querySelector('#exampleState');
         const cep = document.querySelector('#exampleZip');
         
         const emailVazio = document.querySelector('#emailError');
